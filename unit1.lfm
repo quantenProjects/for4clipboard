@@ -1,0 +1,198 @@
+object Form1: TForm1
+  Left = 513
+  Height = 545
+  Top = 169
+  Width = 730
+  Caption = 'for4clipboard'
+  ClientHeight = 545
+  ClientWidth = 730
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  LCLVersion = '1.6.0.4'
+  object Memo1: TMemo
+    Left = 9
+    Height = 526
+    Top = 10
+    Width = 590
+    TabOrder = 0
+  end
+  object LabeledEdit1: TLabeledEdit
+    Left = 616
+    Height = 27
+    Top = 40
+    Width = 48
+    EditLabel.AnchorSideLeft.Control = LabeledEdit1
+    EditLabel.AnchorSideRight.Control = LabeledEdit1
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = LabeledEdit1
+    EditLabel.Left = 616
+    EditLabel.Height = 17
+    EditLabel.Top = 20
+    EditLabel.Width = 48
+    EditLabel.Caption = 'Replace'
+    EditLabel.ParentColor = False
+    TabOrder = 1
+    Text = '#'
+  end
+  object Label1: TLabel
+    Left = 616
+    Height = 17
+    Top = 80
+    Width = 32
+    Caption = 'From'
+    ParentColor = False
+    OnClick = Label1Click
+  end
+  object FloatSpinEdit1Begin: TFloatSpinEdit
+    Left = 616
+    Height = 25
+    Top = 104
+    Width = 80
+    Increment = 1
+    MaxValue = 500
+    MinValue = -500
+    TabOrder = 2
+    Value = 0
+  end
+  object FloatSpinEdit2End: TFloatSpinEdit
+    Left = 616
+    Height = 25
+    Top = 152
+    Width = 80
+    Increment = 1
+    MaxValue = 500
+    MinValue = -500
+    TabOrder = 3
+    Value = 5
+  end
+  object Label2: TLabel
+    Left = 616
+    Height = 17
+    Top = 136
+    Width = 13
+    Caption = 'To'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 616
+    Height = 17
+    Top = 192
+    Width = 30
+    Caption = 'Step'
+    ParentColor = False
+  end
+  object FloatSpinEdit2Step: TFloatSpinEdit
+    Left = 616
+    Height = 25
+    Top = 216
+    Width = 80
+    DecimalPlaces = 5
+    Increment = 1
+    MaxValue = 500
+    MinValue = 0.001
+    TabOrder = 4
+    Value = 1
+  end
+  object Button1Go: TButton
+    Left = 616
+    Height = 25
+    Top = 360
+    Width = 107
+    Caption = 'Go'
+    OnClick = Button1GoClick
+    TabOrder = 5
+  end
+  object Button2GoCopyClose: TButton
+    Left = 616
+    Height = 25
+    Top = 472
+    Width = 107
+    Caption = 'Go Copy Close'
+    OnClick = Button2GoCopyCloseClick
+    TabOrder = 6
+  end
+  object Button3CopyClose: TButton
+    Left = 616
+    Height = 25
+    Top = 432
+    Width = 107
+    Caption = 'Copy Close'
+    OnClick = Button3CopyCloseClick
+    TabOrder = 7
+  end
+  object Button4Selc: TButton
+    Left = 672
+    Height = 25
+    Top = 40
+    Width = 51
+    Caption = 'Selec'
+    OnClick = Button4SelcClick
+    TabOrder = 8
+  end
+  object SpinEdit1: TSpinEdit
+    Left = 616
+    Height = 25
+    Top = 328
+    Width = 50
+    TabOrder = 9
+    Value = 2
+  end
+  object Label4: TLabel
+    Left = 616
+    Height = 17
+    Top = 304
+    Width = 39
+    Caption = 'Digitis'
+    ParentColor = False
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 616
+    Height = 40
+    Top = 256
+    Width = 102
+    AutoFill = True
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 36
+    ClientWidth = 98
+    ItemIndex = 0
+    Items.Strings = (
+      'dot'
+      'comma'
+    )
+    TabOrder = 10
+  end
+  object Button1: TButton
+    Left = 616
+    Height = 25
+    Top = 511
+    Width = 75
+    Caption = 'Shortcuts'
+    OnClick = Button1Click
+    TabOrder = 11
+  end
+  object Button2: TButton
+    Left = 616
+    Height = 25
+    Top = 400
+    Width = 107
+    Caption = 'Copy'
+    OnClick = Button2Click
+    TabOrder = 12
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer1Timer
+    left = 664
+    top = 76
+  end
+end
